@@ -4,6 +4,10 @@ import Header from '../components/Header';
 import { IoStarSharp } from "react-icons/io5";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaDirections } from "react-icons/fa";
+import { RiShareForwardLine } from "react-icons/ri";
+import { CiBookmarkPlus } from "react-icons/ci";
+
+
 
 const RestaurantDetails = () => {
   const { id } = useParams();
@@ -43,10 +47,10 @@ const RestaurantDetails = () => {
       <Header check={false} />
       <div>
         <img className="rounded-lg w-full h-[400px] object-cover mb-6 " src={restaurant.url} alt={restaurant.name} />
-        <div className='flex flex-row justify-between'>
+        <div className='flex flex-row justify-between flex-wrap'>
             <h1 className="text-[32px] font-bold">{restaurant.name}</h1>
             <div className='flex flex-row gap-4'>
-                <div className='flex flex-row itemsx-center justify-center gap-1'>
+                <div className='flex flex-row itemsx-center flex-wrap justify-center gap-1'>
                     <div className='flex flex-row items-center bg-[#267E3E] justify-center text-white rounded-md p-1 w-[50px] h-[30px]'>
                         <p className='text-[14px] font-semibold'>{restaurant.RatingFar}</p>
                         <IoStarSharp className='text-[14px] font-semibold' />
@@ -77,18 +81,18 @@ const RestaurantDetails = () => {
             <IoIosInformationCircleOutline />
         </div>
       </div>
-        <div className='flex flex-row items-center justify-start gap-4 my-2'>
+      <div className='flex flex-row flex-wrap items-center justify-start gap-4 my-2'>
         <button className='flex flex-row gap-2 items-center justify-center border border-black rounded-md p-2'>
             <FaDirections className='text-red-700'/>
             <p>Direction</p>
         </button>
         <button className='flex flex-row gap-2 items-center justify-center border border-black rounded-md p-2'>
-            <FaDirections className='text-red-700'/>
-            <p>Direction</p>
+            <RiShareForwardLine className='text-red-700'/>
+            <p>share</p>
         </button>
         <button className='flex flex-row gap-2 items-center justify-center border border-black rounded-md p-2'>
-            <FaDirections className='text-red-700'/>
-            <p>Direction</p>
+            <CiBookmarkPlus className='text-red-700'/>
+            <p>Bookmark</p>
         </button>
       </div>
     </div>
